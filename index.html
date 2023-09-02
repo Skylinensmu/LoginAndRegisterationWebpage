@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Log On Screen</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Borel&family=Dancing+Script&family=Tangerine:wght@700&display=swap');
+    </style>
+</head>
+<nav>
+    <p>SkylineNSMU Website</p>
+    <div class="menu_container">
+        <img src="Asset/Home Botton.png" alt="home_icon" id="Home">
+        <a href="">About Us</a>
+        <a href="">Our Product</a>
+        <a href="">Contact us</a>
+
+    </div>
+       
+</nav>
+<body>
+    
+    <div class="Flip_card">
+        <div class="Flip_card_inner">
+            <div class="Flip_front">
+                <div class="login_container">    
+                    <H2>Sign In</H2>
+                    <p>Username</p>
+                    <input type="text">
+                    <p>Password</p>
+                    <input type="password"><br>
+                    <div class="alwaylogon">
+                        <input type="checkbox" name="KeepSignin" id="Keep_signin">
+                        <p>Keep Me Signed In</p>
+                    </div>
+                    <div class="Login_btn">
+                        <button type="button" id="login">Sign In</button>
+                        <button type="button" id="newregister">Sign Up</button>
+                    </div>
+                    <p id="forgotpassword" onclick="modalpopup()">Forgot Your Password?<p>
+                </div>
+            </div>        
+            <div class="Flip_back">
+                <div class="Regist_container">
+                    <H2>Sign Up</H2>
+                    <p>Username</p>
+                    <input type="text">
+                    <p>Password</p>
+                    <input type="password" id="password" onkeyup="checkpassword()">
+                    <p>Confirm-Password</p>
+                    <input type="password" id="confirmpassword" onkeyup="checkconfirm()">
+                    <input type="text"  id="showcheckpassword" value="" readonly>
+                    <p>Your name</p>
+                    <input type="text">
+                    <p>Your Surname</p>
+                    <input type="text">
+                    <p>Date Of Birth</p>
+                    <input type="date">
+                    <p>Mobile</p>
+                    <input type="number">
+                    <p>Email Adress</p>
+                    <input type="email">
+                    <div class="Register_btn">
+                        <button type="button" id="sentregister">Sign Up</button>
+                        <button type="button" id="backtologin">Sign In Screen</button>
+                    </div>
+                </div>     
+            </div>
+        </div>
+    </div>
+    <div id="modal">     
+        <span id="close_modal" onclick="closemodal()">&times;</span>
+        <p>Please Enter Your E-mail</p> 
+        <input type="email" name="emailforpassword" id="recoveryemail">  
+        <button onclick="checkbeforereset()">Recovery My Password</button>
+    </div>
+</body>
+<footer>
+<p>&copy; 2023 SkylineNSMU Website. All rights reserved.</p>
+</footer>
+</html>
